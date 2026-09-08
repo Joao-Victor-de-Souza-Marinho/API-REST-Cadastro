@@ -56,5 +56,6 @@ public class UsuarioService {
     public void delete(UUID id) {
         Usuario usuarioExistente = usuarioRepository.findById(id).orElseThrow(() -> new RuntimeException("Usuario não encontrado"));
 
+        usuarioRepository.delete(usuarioExistente);
     }
 }
