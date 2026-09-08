@@ -22,10 +22,10 @@ public class UsuarioService {
                 .map(UsuarioResponseDTO::fromEntity).toList();
     }
 
-    public Usuario findById(UUID id) {
+    public UsuarioResponseDTO findById(UUID id) {
         Optional<Usuario> usuarioOpt = usuarioRepository.findById(id);
         if(usuarioOpt.isPresent()) {
-            return  usuarioOpt.get();
+            return  UsuarioResponseDTO.fromEntity(usuarioOpt.get());
         } else {
             throw new RuntimeException("Usuário não encontrado");
         }
