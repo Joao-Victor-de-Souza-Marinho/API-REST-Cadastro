@@ -1,9 +1,9 @@
-package com.senai.cadastro.interface_ui;
+package com.senai.cadastro.interface_ui.controller;
 
 import com.senai.cadastro.application.dto.UsuarioRequestDTO;
 import com.senai.cadastro.application.dto.UsuarioResponseDTO;
 import com.senai.cadastro.application.service.UsuarioService;
-import com.senai.cadastro.domain.entity.Usuario;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -30,7 +30,7 @@ public class UsuarioController {
     }
 
     @PostMapping
-    public ResponseEntity<UsuarioResponseDTO> cadastrarUsuario(@RequestBody UsuarioRequestDTO usuarioRequestDTO) {
+    public ResponseEntity<UsuarioResponseDTO> cadastrarUsuario(@Valid @RequestBody UsuarioRequestDTO usuarioRequestDTO) {
         UsuarioResponseDTO usuarioSalvo = usuarioService.save(usuarioRequestDTO);
         return ResponseEntity.created(URI.create("/usuario/" + usuarioSalvo.id())
         ).body(usuarioSalvo);
@@ -39,7 +39,7 @@ public class UsuarioController {
     @PutMapping("/{id}")
     public ResponseEntity<UsuarioResponseDTO> atualizarUsuario(
             @PathVariable UUID id,
-            @RequestBody UsuarioRequestDTO usuarioRequestDTO) {
+            @Valid @RequestBody UsuarioRequestDTO usuarioRequestDTO) {
 
         return ResponseEntity.ok(usuarioService.update(usuarioRequestDTO, id)) ;
     }
