@@ -1,4 +1,4 @@
-package com.senai.cadastro.application.infrastructure;
+package com.senai.cadastro.application.infrastructure.config;
 
 
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;

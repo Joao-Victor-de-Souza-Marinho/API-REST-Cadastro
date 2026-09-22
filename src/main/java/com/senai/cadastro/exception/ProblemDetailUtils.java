@@ -1,4 +1,4 @@
-package com.senai.cadastro.interface_ui.exception;
+package com.senai.cadastro.exception;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ProblemDetail;
 
