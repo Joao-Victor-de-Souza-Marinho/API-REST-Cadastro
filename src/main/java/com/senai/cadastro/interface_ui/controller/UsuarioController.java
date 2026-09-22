@@ -270,7 +270,7 @@ public class UsuarioController {
             @PathVariable UUID id,
             @Valid @RequestBody UsuarioRequestDTO usuarioRequestDTO
     ) {
-        return ResponseEntity.ok(usuarioService.update(usuarioRequestDTO,id));
+        return ResponseEntity.ok(usuarioService.update(id,usuarioRequestDTO));
     }
 
     @PatchMapping("/{id}/perfil")
@@ -332,7 +332,7 @@ public class UsuarioController {
             @PathVariable UUID id,
             @Valid @RequestBody PerfilUpdateDTO perfilUpdateDTO
     ) {
-        return ResponseEntity.ok( usuarioService.updatePerfil( perfilUpdateDTO,id));
+        return ResponseEntity.ok( usuarioService.updatePerfil( id,perfilUpdateDTO));
     }
 
     @DeleteMapping("/{id}")

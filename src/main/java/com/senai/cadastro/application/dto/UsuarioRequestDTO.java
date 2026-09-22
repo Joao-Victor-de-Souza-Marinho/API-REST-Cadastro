@@ -1,5 +1,6 @@
 package com.senai.cadastro.application.dto;
 
+import com.senai.cadastro.domain.entity.Perfil;
 import com.senai.cadastro.domain.entity.Usuario;
 
 import jakarta.validation.constraints.Email;
@@ -30,10 +31,13 @@ public record UsuarioRequestDTO(
     public Usuario toEntity() {
         return new Usuario(
                 null,
+                senha,
                 nome,
                 cpf,
                 email,
-                senha
+                Perfil.USER
+
+
         );
     }
 
