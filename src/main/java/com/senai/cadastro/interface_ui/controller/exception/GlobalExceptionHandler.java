@@ -1,4 +1,4 @@
-package com.senai.cadastro.exception;
+package com.senai.cadastro.interface_ui.controller.exception;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ProblemDetail;
@@ -10,7 +10,7 @@ import org.springframework.web.method.annotation.MethodArgumentTypeMismatchExcep
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.senai.cadastro.exception.ProblemDetailUtils.buildProblem;
+import static com.senai.cadastro.interface_ui.controller.exception.ProblemDetailUtils.buildProblem;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {

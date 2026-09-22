@@ -1,4 +1,4 @@
-package com.senai.cadastro.application.infrastructure.bootstrap;
+package com.senai.cadastro.infrastructure.bootstrap;
 
 import com.senai.cadastro.domain.entity.Perfil;
 import com.senai.cadastro.domain.entity.Usuario;

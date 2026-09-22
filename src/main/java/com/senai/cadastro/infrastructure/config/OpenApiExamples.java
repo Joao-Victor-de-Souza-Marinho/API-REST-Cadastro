@@ -1,4 +1,4 @@
-package com.senai.cadastro.application.infrastructure.config;
+package com.senai.cadastro.infrastructure.config;
 
 public final class OpenApiExamples {
 

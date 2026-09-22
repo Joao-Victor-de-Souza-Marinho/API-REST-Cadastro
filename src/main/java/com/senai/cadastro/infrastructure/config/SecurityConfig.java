@@ -1,6 +1,6 @@
-package com.senai.cadastro.application.infrastructure.config;
+package com.senai.cadastro.infrastructure.config;
 
-import com.senai.cadastro.exception.ProblemDetailUtils;
+import com.senai.cadastro.interface_ui.controller.exception.ProblemDetailUtils;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
